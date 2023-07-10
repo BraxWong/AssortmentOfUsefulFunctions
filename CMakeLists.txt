@@ -3,11 +3,14 @@ project(AssortmentOfUsefulFunctions VERSION 1.0)
 add_executable(${PROJECT_NAME} main.cpp)
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_BINARY_DIR})
 add_subdirectory(File)
+add_subdirectory(Date)
 target_include_directories(${PROJECT_NAME}
   PUBLIC File
+  PUBLIC Date
 )
 target_link_directories(${PROJECT_NAME}
   PUBLIC File
+  PUBLIC Date
 )
-target_link_libraries(${PROJECT_NAME} PRIVATE File)
+target_link_libraries(${PROJECT_NAME} File Date)
 
