@@ -4,13 +4,16 @@ add_executable(${PROJECT_NAME} main.cpp)
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_BINARY_DIR})
 add_subdirectory(File)
 add_subdirectory(Date)
+add_subdirectory(String)
 target_include_directories(${PROJECT_NAME}
   PUBLIC File
   PUBLIC Date
+  PUBLIC String
 )
 target_link_directories(${PROJECT_NAME}
   PUBLIC File
   PUBLIC Date
+  PUBLIC String
 )
-target_link_libraries(${PROJECT_NAME} File Date)
+target_link_libraries(${PROJECT_NAME} File Date String)
 

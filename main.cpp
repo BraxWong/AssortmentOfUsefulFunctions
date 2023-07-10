@@ -1,8 +1,8 @@
-#include "File/File.h"
+#include "String/stringFunc.h"
 int main()
 {
-  File *file = new File();
-  file->sayHi();
-  delete file;
-  return 0;
+  stringFunc* str = new stringFunc();
+  if(str->isStringDigit("1234567"))
+    std::cout << "Yes\n";
+  return 1;
 }
