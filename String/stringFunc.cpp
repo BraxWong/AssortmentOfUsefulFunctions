@@ -19,3 +19,11 @@ bool stringFunc::isStringAlphabets(std::string str)
   }
   return true;
 }
+
+bool stringFunc::isSubString(std::string original, std::string subString)
+{
+ if(original.find(subString) != std::string::npos)
+    return true;
+ return false;
+}
+
